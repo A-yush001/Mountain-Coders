@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+   
+
+
+    <div class="media-body p-2 my-2">
+      <h4 class="media-heading my-2">{{blog.title}}</h4>
+      <p>{{blog.content|safe}}</p>
+      
+    </div>
+  
+
+</div>
+{% endblock body %}

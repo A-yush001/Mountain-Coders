@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block activeblog %} active{% endblock activeblog %}
+
+{% block css %}
+<style>
+  .container{
+    min-height:100vh;
+  }
+  
+
+</style>
+
+{% endblock css %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="center">Welcome Mountain Coders Blog</h1>
+{% for blog in blogs  %}
+
+
+
+    <div class="media-body p-0 my-0">
+      <h4 class="media-heading my-0"><a href="blogpost/{{blog.slug}}" class="text-black ">{{blog.title}}</h4></a>
+      <p>{{blog.content_dec|slice:245}}...</p>
+      <a href="blogpost/{{blog.slug}}" class="text-black "><button type="button" class="btn btn-success">Read More</button></a>
+    
+    
+    <br>
+    </div>
+  
+
+{% endfor %}
+
+</div>
+{% endblock body %}
